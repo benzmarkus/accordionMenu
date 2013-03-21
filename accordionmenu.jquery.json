@@ -1,0 +1,31 @@
+{
+"name": "accordionMenu",
+"title": "Accordion Menu",
+"description": "Simple vertical css menu which works like accordion. Full support of multiple sub menus and active link recognition to open the associated sub menu",
+"keywords": [
+"menu",
+"css",
+"vertical",
+"multipal",
+"sub menu",
+"active link"
+],
+"version": "1.0.1",
+"author": {
+"name": "Markus Benz",
+"url": "http://benzmarkus.github.com/accordionMenu"
+},
+"licenses": [
+{
+"type": "GNU",
+"url": "http://www.gnu.org/licenses/gpl-3.0"
+}
+],
+"bugs": "https://github.com/benzmarkus/accordionMenu/issues",
+"homepage": "http://benzmarkus.github.com/accordionMenu",
+"docs": "http://benzmarkus.github.com/accordionMenu",
+"download": "http://benzmarkus.github.com/accordionMenu",
+"dependencies": {
+"jquery": ">=1.5"
+}
+}
