@@ -31,32 +31,182 @@
         <hr>
 
         <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
+          <h3>Welcome</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Here you can find resouces and a small documentaion of the jQuery plugin.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h3>Initializing the menu</h3>
+
+<pre><code>jQuery(function() {
+    jQuery("#acdnmenu").accordionMenu();
+});
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h3>This is the structure</h3>
 
-<h3>Designer Templates</h3>
+<pre><code>&lt;div id="acdnmenu" style="width:208px;height:390px; background-color:#e2ecf5; padding: 10px 10px 10px 10px;"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Topic
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Sub Menu
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;Sub Level 1
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub Link 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub Link 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;Sub Level 2
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Sub Link 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Sub Link 2&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Sub Link 3&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Sub Link 4&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Normal Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Normal Link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+</code></pre>
 
-<h3>Rather Drive Stick?</h3>
+<h3>Use this css sheet to style the menu</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<pre><code>#acdnmenu {
+    height: 300px;
+    width: 240px;
+    margin: 0px;
+}
+#acdnmenu ul.acdnTop {
+    display: block;
+    border: 1px solid #D8E2F3;
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 0;
+}
+#acdnmenu div.acdnHeading, #acdnmenu a.acdnLink {
+    background: url("bg.gif") repeat-x scroll 0 0 #E8FFF8;
+    color: #000000;
+    font: 12px Verdana;
+    outline: medium none;
+    padding: 8px 8px 8px 24px;
+    text-align: left;
+    text-decoration: none;
+}
+#acdnmenu div.acdnCurrent, #acdnmenu div:hover, #acdnmenu a.acdnLink:hover, #acdnmenu div.acdnCurrent a.acdnLink {
+    background-position: 0 -64px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+}
+#acdnmenu a.acdnCurrent, #acdnmenu a.acdnCurrent:hover {
+    color: #336699;
+    text-decoration: none;
+}
+#acdnmenu div.acdnArrowImage {
+    background-image: url("arrows.gif");
+    background-position: 0 0;
+    height: 12px;
+    left: 4px;
+    top: 9px;
+    width: 12px;
+}
+#acdnmenu div.acdnCurrent div.acdnArrowImage {
+    background-position: 0 -12px;
+}
+#acdnmenu li.acdnSeparator {
+    border-bottom: 1px solid #D8E2F3;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    font-size: 0px;
+}
+#acdnmenu ul.acdnSub {
+    padding-left: 14px;
+}
+#acdnmenu ul.acdnSub div.acdnHeading {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font: 12px Arial;
+    padding: 5px 5px 5px 20px;
+    text-align: left;
+}
+#acdnmenu ul.acdnSub div.acdnHeading a {
+    color: #000000;
+}
+#acdnmenu ul.acdnSub div.acdnCurrent {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+}
+#acdnmenu ul.acdnSub a.acdnLink {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font: 11px Arial;
+    padding: 5px 5px 5px 20px;
+    text-decoration: none;
+}
+#acdnmenu ul.acdnSub a.acdnLink:hover, #acdnmenu ul.acdnSub a.acdnCurrent, #acdnmenu ul.acdnSub div.acdnHeading a:hover, #acdnmenu ul.acdnSub div.acdnHeading a.acdnCurrent {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    text-decoration: underline;
+}
+#acdnmenu ul.acdnSub div.acdnArrowImage {
+    background-image: url("arrows.gif");
+    background-position: 0 -24px;
+    height: 12px;
+    left: 4px;
+    top: 6px;
+    width: 12px;
+}
+#acdnmenu ul.acdnSub div.acdnCurrent div.acdnArrowImage {
+    background-position: 0 -36px;
+}
+#acdnmenu, #acdnmenu ul {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+#acdnmenu li {
+    font-size: 12px;
+    line-height: 16px;
+}
+#acdnmenu:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#acdnmenu ul {
+    list-style-type: none;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    top:0px;
+    display: none;
+}
+#acdnmenu li {
+    margin: 0px;
+    padding: 0px;
+}
+#acdnmenu div.acdnHeading, #acdnmenu div.acdnCurrent {
+    cursor: pointer;
+    position: relative;
+}
+#acdnmenu div.acdnArrowImage {
+    overflow: hidden;
+    position: absolute;
+}
+</code></pre>
         </section>
 
         <footer>
