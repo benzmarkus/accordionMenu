@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Website Title</title>
+	<script src="jquery-1.9.1.min.js"></script>
+	<script src="jquery.accordionMenu.js"></script>
+	<script>
+		jQuery(function() {
+			jQuery("#acdnmenu").accordionMenu();
+		});
+	</script>
+	<style>
+body {
+	background-color: white;
+}
+
+#acdnmenu {
+    height: 300px;
+    width: 240px;
+	margin: 0px;
+}
+#acdnmenu ul.acdnTop {
+	display: block;
+	border: 1px solid #D8E2F3;
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 0;
+}
+#acdnmenu div.acdnHeading, #acdnmenu a.acdnLink {
+    background: url("bg.gif") repeat-x scroll 0 0 #E8FFF8;
+    color: #000000;
+    font: 12px Verdana;
+    outline: medium none;
+    padding: 8px 8px 8px 24px;
+    text-align: left;
+    text-decoration: none;
+}
+#acdnmenu div.acdnCurrent, #acdnmenu div:hover, #acdnmenu a.acdnLink:hover, #acdnmenu div.acdnCurrent a.acdnLink {
+    background-position: 0 -64px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+}
+#acdnmenu a.acdnCurrent, #acdnmenu a.acdnCurrent:hover {
+    color: #336699;
+    text-decoration: none;
+}
+#acdnmenu div.acdnArrowImage {
+    background-image: url("arrows.gif");
+    background-position: 0 0;
+    height: 12px;
+    left: 4px;
+    top: 9px;
+    width: 12px;
+}
+#acdnmenu div.acdnCurrent div.acdnArrowImage {
+    background-position: 0 -12px;
+}
+#acdnmenu li.acdnSeparator {
+    border-bottom: 1px solid #D8E2F3;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	font-size: 0px;
+}
+#acdnmenu ul.acdnSub {
+    padding-left: 14px;
+}
+#acdnmenu ul.acdnSub div.acdnHeading {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font: 12px Arial;
+    padding: 5px 5px 5px 20px;
+    text-align: left;
+}
+#acdnmenu ul.acdnSub div.acdnHeading a {
+    color: #000000;
+}
+#acdnmenu ul.acdnSub div.acdnCurrent {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+}
+#acdnmenu ul.acdnSub a.acdnLink {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font: 11px Arial;
+    padding: 5px 5px 5px 20px;
+    text-decoration: none;
+}
+#acdnmenu ul.acdnSub a.acdnLink:hover, #acdnmenu ul.acdnSub a.acdnCurrent, #acdnmenu ul.acdnSub div.acdnHeading a:hover, #acdnmenu ul.acdnSub div.acdnHeading a.acdnCurrent {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    text-decoration: underline;
+}
+#acdnmenu ul.acdnSub div.acdnArrowImage {
+    background-image: url("arrows.gif");
+    background-position: 0 -24px;
+    height: 12px;
+    left: 4px;
+    top: 6px;
+    width: 12px;
+}
+#acdnmenu ul.acdnSub div.acdnCurrent div.acdnArrowImage {
+    background-position: 0 -36px;
+}
+#acdnmenu, #acdnmenu ul {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+#acdnmenu li {
+    font-size: 12px;
+    line-height: 16px;
+}
+#acdnmenu:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#acdnmenu ul {
+    list-style-type: none;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+	top:0px;
+	display: none;
+}
+#acdnmenu li {
+    margin: 0px;
+    padding: 0px;
+}
+#acdnmenu div.acdnHeading, #acdnmenu div.acdnCurrent {
+    cursor: pointer;
+    position: relative;
+}
+#acdnmenu div.acdnArrowImage {
+    overflow: hidden;
+    position: absolute;
+}
+
+	</style>
+</head>
+<body>
+<div id="menu">
+	<nav>
+		<div id="acdnmenu" style="width:208px;height:390px; background-color:#e2ecf5; padding: 10px 10px 10px 10px;">
+			<ul>
+				<li>Horizontal Menus
+					<ul>
+						<li><a href="index3.html">Tooltip Menu</a></li>
+						<li><a href="#drop-down-menu">Drop Down Menu</a></li>
+						<li><a href="#horizontal">Tab Menu</a></li>
+						<li><a href="horizontal/css-menu">CSS Menu</a></li>
+						<li><a href="/horizontal/drop-down-menu">CSS Drop Down Menu</a></li>
+					</ul>
+				</li>
+				<li>Vertical Menus
+					<ul>
+						<li><a href="/vertical/accordion-menu">Accordion Menu</a></li>
+						<li><a href="/vertical/accordion-menu-css">Accordion Menu CSS</a></li>
+						<li><a href="/vertical/vertical-menu">Vertical Menu</a></li>
+					</ul>
+				</li>
+				<li>Single-Level Menus
+					<ul>
+						<li><a href="/horizontal/css-menus">CSS Menus</a></li>
+						<li><a href="/horizontal/javascript-menu">Javascript Menus</a></li>
+					</ul>
+				</li>
+				<li>Tooltip
+					<ul>
+						<li><a href="/tooltip/css-tooltip">CSS Tooltip</a></li>
+						<li><a href="/tooltip/css3-tooltip">CSS3 Tooltip</a></li>
+						<li><a href="/tooltip/javascript-tooltip">Javascript Tooltip</a></li>
+					</ul>
+				</li>
+				<li>Image Sliders
+					<ul>
+						<li><a href="/javascript-image-slider">Javascript Image Slider</a>
+						</li>
+						<li>Zoom Slider
+							<ul>
+								<li><a href="index2.html">Demo 1</a></li>
+								<li><a href="/slideshow/zoom-slider-demo2">Demo 2</a></li>
+							</ul>
+						</li>
+						<li>Thumbnail Slider
+							<ul>
+								<li><a href="/jquery-slider">jQuery Slider</a></li>
+								<li><a href="/slider/jquery-slideshow">jQuery Slideshow</a></li>
+								<li><a href="/slider/content-slider">Content Slider</a></li>
+								<li><a href="/slider/slider-with-tooltip">Slider with Tooltip</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="/color-picker">Color Picker</a></li>
+				<li><a href="/tabbed-content">Tabbed Content</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+</body>
+</html>
