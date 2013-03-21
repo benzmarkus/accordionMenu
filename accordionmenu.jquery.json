@@ -7,8 +7,10 @@
 "css",
 "vertical",
 "multipal",
-"sub menu",
-"active link"
+"menu",
+"sub",
+"active",
+"link"
 ],
 "version": "1.0.1",
 "author": {
